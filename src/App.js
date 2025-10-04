@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import StudentTable from "./components/StudentTable";
+import StudentForm from "./components/StudentForm";
+import Login from "./components/Login";
+import './styles/StudentForm.css';
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [refreshFlag, setRefreshFlag] = useState(false);
+  const [editStudent, setEditStudent] = useState(null);
+
+  // This changes the tab title
+  useEffect(() => {
+    document.title = "Student Management System";
+  }, []);
+
+  const refresh = () => setRefreshFlag(!refreshFlag);
+
+  if (!isLoggedIn) {
+    return <Login onLogin={() => setIsLoggedIn(true)} />;
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <div className="student-management">
+        <div className="page-header">
+          <h1>Student Management System</h1>
+          <p>Manage your students efficiently</p>
+        </div>
+
+        <StudentForm
+          refresh={refresh}
+          studentToEdit={editStudent}
+          clearEdit={() => setEditStudent(null)}
+        />
+
+        <StudentTable key={refreshFlag} onEdit={(s) => setEditStudent(s)} />
+      </div>
     </div>
   );
 }
