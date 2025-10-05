@@ -84,5 +84,3 @@ The project is fully deployed — backend on **Railway** and frontend on **Netli
 cd backend
 mvn spring-boot:run
 
-## 📁 Project Structure
-
