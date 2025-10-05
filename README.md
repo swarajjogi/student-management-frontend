@@ -84,13 +84,14 @@ The project is fully deployed — backend on **Railway** and frontend on **Netli
 ```bash
 cd backend
 mvn spring-boot:run
+```
 
 ### 2️⃣ Frontend
 ```bash
 cd frontend
 npm install
 npm start
-
+```
 - Update baseURL in src/api.js with your backend URL if running locally.
 
 - Screenshot
