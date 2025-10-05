@@ -38,7 +38,8 @@ The project is fully deployed — backend on **Railway** and frontend on **Netli
 - Spring Boot  
 - Spring Web  
 - Spring Data JPA  
-- MySQL / PostgreSQL  
+- MySQL / PostgreSQL
+- Repo for Backend - https://github.com/swarajjogi/student-management
 
 **Deployment:**
 - Railway (Backend)  
