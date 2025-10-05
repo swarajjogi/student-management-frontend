@@ -85,3 +85,21 @@ The project is fully deployed — backend on **Railway** and frontend on **Netli
 cd backend
 mvn spring-boot:run
 
+### 2️⃣ Frontend
+```bash
+cd frontend
+npm install
+npm start
+
+- Update baseURL in src/api.js with your backend URL if running locally.
+
+- Screenshot
+<img width="1912" height="973" alt="image" src="https://github.com/user-attachments/assets/c0a0b9c8-6824-4121-ad4d-207f49f58567" />
+
+## ✍️ Author
+
+👤 **Swaraj Jogi**  
+📧 [swrajjogi@gmail.com](mailto:swrajjogi@gmail.com)  
+🔗 [LinkedIn](https://www.linkedin.com/in/swaraj-jogi-92950322b/)  
+💻 [GitHub](https://github.com/swarajjogi)
+
