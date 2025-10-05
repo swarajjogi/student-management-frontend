@@ -1,23 +1,88 @@
-# Student Management System
+# 🎓 Student Management System
 
-### Description
-A full-stack web application built with Spring Boot (backend) and React.js (frontend) to manage student records.
+A full-stack **Student Management System** built using **Spring Boot (backend)** and **React (frontend)**.  
+This application lets users **add, edit, view, and delete student records** through a simple, responsive web interface.
 
-### Features
-- Add, view, update, and delete students
-- Responsive UI with custom CSS
-- Full CRUD REST API integration
+The project is fully deployed — backend on **Railway** and frontend on **Netlify**.
 
-### Tech Stack
-- Backend: Java, Spring Boot
-- Frontend: React.js, Axios
-- Database: MySQL
-- Tools: VS Code, IntelliJ IDEA, Postman
+---
 
-### How to Run
-1. Start backend: `mvn spring-boot:run`
-2. Start frontend: `npm start`
-3. App will be available at `http://localhost:3000`
+## 🚀 Live Demo
 
-### Author
-Swaraj Jogi
+🔹 **Frontend:** [https://student-management-fronten.netlify.app](https://student-management-fronten.netlify.app)  
+🔹 **Backend:** [https://student-management-production-4c9e.up.railway.app](https://student-management-production-4c9e.up.railway.app)
+
+---
+
+## 🧩 Features
+
+✅ Add new student records  
+✅ Edit existing student details  
+✅ Delete student entries  
+✅ Fetch and display all students dynamically  
+✅ Simple login interface  
+✅ Fully responsive UI  
+✅ Hosted frontend & backend  
+✅ Proper CORS configuration  
+
+---
+
+## 🏗️ Tech Stack
+
+**Frontend:**
+- React.js  
+- Axios  
+- CSS  
+
+**Backend:**
+- Spring Boot  
+- Spring Web  
+- Spring Data JPA  
+- MySQL / PostgreSQL  
+
+**Deployment:**
+- Railway (Backend)  
+- Netlify (Frontend)
+
+---
+
+---
+
+## ⚙️ How It Works
+
+1. The React frontend communicates with the Spring Boot backend via Axios.  
+2. Spring Boot handles CRUD operations and interacts with the database using JPA.  
+3. CORS is configured to allow requests only from the Netlify frontend.  
+4. React manages state updates and refreshes the student list after operations.
+
+---
+
+## 🧠 Key Learnings
+
+- Connecting React frontend with a Spring Boot backend  
+- Handling CORS and environment variables  
+- Deploying full-stack apps on **Railway** and **Netlify**  
+- Designing RESTful APIs using Spring Boot  
+
+---
+
+## 🧰 API Endpoints
+
+| Method | Endpoint           | Description             |
+|--------|--------------------|-------------------------|
+| GET    | `/students`        | Fetch all students      |
+| POST   | `/students`        | Add a new student       |
+| PUT    | `/students/{id}`   | Update an existing one  |
+| DELETE | `/students/{id}`   | Delete a student        |
+
+---
+
+## 💻 Run Locally
+
+### 1️⃣ Backend
+```bash
+cd backend
+mvn spring-boot:run
+
+## 📁 Project Structure
+
