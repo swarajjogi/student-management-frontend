@@ -2,20 +2,22 @@ import React, { useState, useEffect } from "react";
 import StudentTable from "./components/StudentTable";
 import StudentForm from "./components/StudentForm";
 import Login from "./components/Login";
-import './styles/StudentForm.css';
+import "./styles/StudentForm.css";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [refreshFlag, setRefreshFlag] = useState(false);
   const [editStudent, setEditStudent] = useState(null);
 
-  // This changes the tab title
+  // Change tab title
   useEffect(() => {
     document.title = "Student Management System";
   }, []);
 
-  const refresh = () => setRefreshFlag(!refreshFlag);
+  // Trigger refresh of StudentTable
+  const refresh = () => setRefreshFlag((prev) => !prev);
 
+  // Login screen
   if (!isLoggedIn) {
     return <Login onLogin={() => setIsLoggedIn(true)} />;
   }
@@ -28,13 +30,18 @@ function App() {
           <p>Manage your students efficiently</p>
         </div>
 
+        {/* Student Form */}
         <StudentForm
           refresh={refresh}
           studentToEdit={editStudent}
           clearEdit={() => setEditStudent(null)}
         />
 
-        <StudentTable key={refreshFlag} onEdit={(s) => setEditStudent(s)} />
+        {/* Student Table */}
+        <StudentTable
+          key={refreshFlag} // Forces re-render when refreshFlag changes
+          onEdit={(student) => setEditStudent(student)}
+        />
       </div>
     </div>
   );
