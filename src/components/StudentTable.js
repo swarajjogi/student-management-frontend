@@ -15,7 +15,7 @@ function StudentTable({ onEdit }) {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await api.get("/students");
+      const response = await api.get("/api/students");
       setStudents(response.data);
     } catch (error) {
       console.error("Error fetching students:", error);
@@ -28,7 +28,7 @@ function StudentTable({ onEdit }) {
   const deleteStudent = async (id) => {
     if (!window.confirm("Are you sure you want to delete this student?")) return;
     try {
-      await api.delete(`/students/${id}`);
+      await api.delete(`/api/students/${id}`);
       fetchStudents();
     } catch (error) {
       console.error("Error deleting student:", error);

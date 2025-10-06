@@ -108,10 +108,10 @@ function StudentForm({ refresh, studentToEdit, clearEdit }) {
 
     try {
       if (student.id) {
-        await api.put(`/students/${student.id}`, student);
+        await api.put(`/api/students/${student.id}`, student);
         showAlert("Student updated successfully!", "success");
       } else {
-        await api.post("/students", student);
+        await api.post("/api/students", student);
         showAlert("Student added successfully!", "success");
       }
 
